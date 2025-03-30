@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Equipos de la Champions League</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .team-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid black;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 70%;
+    }
+    .team-container img {
+      width: 150px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .team-info {
+      flex: 1;
+      font-size: 18px;
+    }
+    .team-results {
+      text-align: left;
+      flex: 1;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Champions League</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="https://es.wikipedia.org/wiki/Anexo:Clubes_participantes_en_la_Liga_de_Campeones_de_la_UEFA#Participantes" target="_blank">Equipos</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://es.wikipedia.org/wiki/Anexo:Clubes_participantes_en_la_Liga_de_Campeones_de_la_UEFA#Participantes" target="_blank">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 class="text-center">Equipos de la Champions League</h1>
+    
+    <div class="team-container d-flex flex-md-row flex-column p-3 shadow">
+      <img src="https://1000marcas.net/wp-content/uploads/2020/01/logo-Real-Madrid-500x333.png" alt="Real Madrid" class="img-fluid">
+      <div class="team-info">
+        <h2>Real Madrid</h2>
+        <p><strong>Ciudad:</strong> Madrid</p>
+        <p><strong>Títulos:</strong> 15</p>
+      </div>
+      <div class="team-results">
+        <p>Últimos resultados: El Real Madrid continúa demostrando su dominio en la Champions League. En su última campaña, ha conseguido victorias contundentes en la fase de grupos y eliminatorias, destacando su fortaleza defensiva y la capacidad de remontar partidos clave.</p>
+      </div>
+    </div>
+
+    <div class="team-container d-flex flex-md-row flex-column p-3 shadow">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/FC_Bayern_M%C3%BCnchen_5_Stars.svg" alt="Bayern Múnich" class="img-fluid">
+      <div class="team-info">
+        <h2>Bayern Múnich</h2>
+        <p><strong>Ciudad:</strong> Múnich</p>
+        <p><strong>Títulos:</strong> 6</p>
+      </div>
+      <div class="team-results">
+        <p>Últimos resultados: Bayern Múnich sigue siendo una máquina de ganar. Su rendimiento en la Bundesliga se mantiene impecable, mientras que en la Champions ha mostrado su capacidad goleadora, avanzando con autoridad.</p>
+      </div>
+    </div>
+
+    <div class="team-container d-flex flex-md-row flex-column p-3 shadow">
+      <img src="https://pngimg.com/uploads/fcb_logo/fcb_logo_PNG18.png" alt="FC Barcelona" class="img-fluid">
+      <div class="team-info">
+        <h2>FC Barcelona</h2>
+        <p><strong>Ciudad:</strong> Barcelona</p>
+        <p><strong>Títulos:</strong> 5</p>
+      </div>
+      <div class="team-results">
+        <p>Últimos resultados: FC Barcelona ha resurgido con una nueva generación de talentos. Su paso por la fase de grupos ha sido sólido, destacando su juego ofensivo y la solidez en defensa.</p>
+      </div>
+    </div>
+
+    <div class="team-container d-flex flex-md-row flex-column p-3 shadow">
+      <img src="https://1000logos.net/wp-content/uploads/2017/08/BVB-Logo.png" alt="Borussia Dortmund" class="img-fluid">
+      <div class="team-info">
+        <h2>Borussia Dortmund</h2>
+        <p><strong>Ciudad:</strong> Dortmund</p>
+        <p><strong>Títulos:</strong> 1</p>
+      </div>
+      <div class="team-results">
+        <p>Últimos resultados: Borussia Dortmund ha demostrado ser un equipo competitivo, con una defensa sólida y jóvenes talentos brillando en la Champions. Han conseguido avanzar con actuaciones destacadas y victorias clave ante equipos fuertes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="card p-4">
+      <h2 class="text-center">Comentarios y Opiniones</h2>
+      <form>
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comentario:</label>
+          <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar Comentario</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
