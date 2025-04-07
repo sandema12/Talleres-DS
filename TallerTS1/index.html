@@ -1,29 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>TV Series</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
-    <div class="container mt-4">
-      <h1>TV Series</h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Channel</th>
-            <th>Seasons</th>
-          </tr>
-        </thead>
-        <tbody id="series"></tbody>
-      </table>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taller TypeScript 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+</head>
+
+<body>
+  <header class="bg-dark text-white text-center py-4 mb-4 shadow">
+    <h1 class="m-0">TV Series</h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+    
+      <div class="col-md-8">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Channel</th>
+                <th>Seasons</th>
+              </tr>
+            </thead>
+            <tbody id="series" class="table-light"></tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-start align-items-center mt-3">
+          <h5 class="mb-0 mr-2"><strong>Average seasons:</strong></h5>
+          <h5 class="mb-0" id="seasons-average"><strong>0</strong></h5>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4">
+        <div id="card-container" class="card shadow d-none">
+          <img id="card-img" class="card-img-top" src="" alt="Series image" />
+          <div class="card-body">
+            <h5 id="card-title" class="card-title"></h5>
+            <p id="card-description" class="card-text"></p>
+            <a id="card-link" href="#" class="btn btn-primary" target="_blank">More info</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+  </div>
+
+  <script type="module" src="./scripts/serie.js"></script>
+  <script type="module" src="./scripts/data.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
 </html>
