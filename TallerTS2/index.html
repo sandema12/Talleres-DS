@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taller Typescript 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-4 mb-4 shadow">
+    <h1 class="m-0">TV Series</h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Tabla -->
+      <div class="col-md-8">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Channel</th>
+              <th scope="col">Seasons</th>
+            </tr>
+          </thead>
+          <tbody id="series" class="table-light">
+          </tbody>
+        </table>
+
+        <div class="d-flex align-items-center mt-3">
+          <h5 class="mr-2"><strong>Average seasons:</strong></h5>
+          <h5 id="seasons-average" class="mb-0"><strong></strong></h5>
+        </div>
+      </div>
+
+      <!-- Tarjeta de imagen -->
+      <div class="col-md-4">
+        <div id="card-container" class="card shadow d-none">
+          <img id="card-img" class="card-img-top" src="" alt="Series image">
+          <div class="card-body">
+            <h5 id="card-title" class="card-title"></h5>
+            <p id="card-description" class="card-text"></p>
+            <a id="card-link" href="#" class="btn btn-primary" target="_blank">More info</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/serie.js"></script>
+  <script type="module" src="./scripts/data.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
