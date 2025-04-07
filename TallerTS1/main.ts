@@ -1,25 +1,30 @@
-import { series } from "./data.js";
+import { Serie } from "./Serie.js";
+import { series } from './data.js';
 
-const seriesTbody: HTMLElement = document.getElementById("series")!;
-let totalSeasons: number = 0;
 
-function renderSeriesInTable(): void {
-  series.forEach((s) => {
-    let tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${s.id}</td>
-      <td>${s.name}</td>
-      <td>${s.channel}</td>
-      <td>${s.seasons}</td>
-    `;
-    seriesTbody.appendChild(tr);
-    totalSeasons += s.seasons;
+let seriesTbody: HTMLElement = document.getElementById('series')!;
+const getPromedioTemporadasElm: HTMLElement = document.getElementById("seasons-average")!;
+
+
+renderCoursesInTable(series);
+getPromedioTemporadasElm.innerHTML = `${getPromedioTemporadas(series)}`
+
+function renderCoursesInTable(series: Serie[]): void {
+  series.forEach(c => {
+    let trElement = document.createElement("tr");
+    trElement.innerHTML = `<td><strong>${c.num}</strong></td>
+                           <td> <a href= ${c.link}>${c.name}</a> </td>
+                           <td>${c.channel}</td>
+                           <td>${c.seasons}</td>`;
+    seriesTbody.appendChild(trElement);
   });
-
-  let avg = totalSeasons / series.length;
-  let trAvg = document.createElement("tr");
-  trAvg.innerHTML = `<td colspan="4"><strong>Seasons average: ${avg.toFixed(2)}</strong></td>`;
-  seriesTbody.appendChild(trAvg);
 }
 
-renderSeriesInTable();
+function getPromedioTemporadas(series: Serie[]): number {
+    let sumaTemporadas : number = 0;
+    let numeroSeries : number = series.length;
+    series.forEach((serie) => sumaTemporadas = sumaTemporadas + serie.seasons);
+    return sumaTemporadas/numeroSeries;
+
+  }
+

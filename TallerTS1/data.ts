@@ -1,4 +1,4 @@
-import { Serie } from "./Serie.js";
+import { Serie } from './Serie.js';
 
 export const series = [
     new Serie (1,"Breaking Bad","AMC", 5,"Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White, a struggling and depressed high school chemistry teacher who is diagnosed with lung cancer" ,
@@ -19,4 +19,3 @@ export const series = [
     new Serie (6, "A Very English Scandal", "BBC", 2, "A Very English Scandal is a fact-based three-part British television comedy-drama miniseries based on John Preston's book of the same name.",
         "https://www.bbc.co.uk/programmes/p065smy4", "https://i.imgur.com/D4y3DrQ.jpg"),
   ];
-   
