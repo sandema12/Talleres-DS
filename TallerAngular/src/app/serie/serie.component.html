@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div>
+    <table class="table">
+      <thead class="bg-dark text-white">
+        <tr>
+          <th class="h3">#</th>
+          <th class="h3">Name</th>
+          <th class="h3">Channel</th>
+          <th class="h3">Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serie of series ; let i = index">
+          <td class="table-secondary">
+            <dd><strong> {{i+1}} </strong></dd>
+          </td>
+          <td class="table-secondary">
+            <dd><a [href]= "serie.webpage" target="_blank">{{serie.name}}</a></dd>
+          </td>
+          <td class="table-secondary">
+            <dd>{{ serie.channel }}</dd>
+          </td>
+          <td class="table-secondary">
+            <dd>{{ serie.seasons }}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
