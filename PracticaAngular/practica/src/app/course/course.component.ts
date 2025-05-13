@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
 import { dataCourses } from './dataCourses';
+import { CourseService } from './course.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,15 +12,15 @@ import { CommonModule } from '@angular/common';
 })
 export class CourseComponent implements OnInit {
 
-  courses: Array<Course> = [];
-  constructor() { }
+  constructor(private courseService: CourseService) { }
+  courses: Array<Course> | undefined;
 
-  getCourseList() {
-    return dataCourses
+  getCourses() {
+    this.courseService.getCourses().subscribe(courses => {
+      this.courses = courses;
+    });
   }
-
   ngOnInit() {
-    this.courses = this.getCourseList();
+    this.getCourses();
   }
-
 }
